@@ -4,6 +4,8 @@ import {
 } from 'react-router-dom';
 import React from 'react';
 import Posts from './posts';
+import newPost from './newPost';
+import Post from './post';
 
 const App = (props) => {
   return (
@@ -12,6 +14,8 @@ const App = (props) => {
         <Nav />
         <Switch>
           <Route exact path="/" component={Posts} />
+          <Route path="/posts/new" component={newPost} />
+          <Route path="/posts/:postID" component={Post} />
           <Route render={() => (<div>post not found </div>)} />
         </Switch>
       </div>
@@ -19,15 +23,12 @@ const App = (props) => {
   );
 };
 
-/* <Route path="/posts/new" component={NewPost} />
-          <Route path="/posts/:postID" component={Post} /> */
-
 const Nav = (props) => {
   return (
     <nav>
-      <ul>
-        <NavLink exact to="/">My Super Awesome Blog</NavLink>
-        <NavLink to="/posts/new">new post</NavLink>
+      <ul className="navBar">
+        <NavLink id="head" exact to="/">CAROLINE BLOG</NavLink>
+        <NavLink to="/posts/new">NEW POST</NavLink>
       </ul>
     </nav>
   );
