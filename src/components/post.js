@@ -30,12 +30,14 @@ class Post extends Component {
       console.log('in render, current is: ');
       console.log(this.props.current);
       return (
-        <div key={this.props.current.id}>
-          <p>{this.props.current.title}</p>
-          <img src={this.props.current.coverURL} alt="blog post" />
+        <div className="post" key={this.props.current.id}>
+          <h1>{this.props.current.title}</h1>
+          <p>tags: {this.props.current.tags}</p>
           <p>{this.props.current.content}</p>
-          <button onClick={this.deletePost} type="submit">DELETE</button>
-          <button onClick={this.editPost} type="submit">EDIT</button>
+          <div className="editors">
+            <button className="btn btn-primary" onClick={this.deletePost} type="submit">DELETE</button>
+            <button className="btn btn-primary" onClick={this.editPost} type="submit">EDIT</button>
+          </div>
         </div>
       );
     } else {

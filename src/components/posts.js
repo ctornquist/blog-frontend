@@ -43,11 +43,14 @@ class Posts extends Component {
     const renderPosts = this.props.all !== null ? this.props.all.map((post) => {
       console.log('rendering posts');
       return (
-        <div key={post.id}>
-          <Link to={`posts/${post.id}`}>{post.title}</Link>
-          <p>{post.tags}</p>
-          <button type="submit">DELETE</button>
-          <img src={post.coverURL} alt="blog post" />
+        <div className="posts" key={post.id}>
+          <Link to={`posts/${post.id}`}>
+            <img src={post.coverURL} alt="blog post" />
+            <div className="top">
+              <h1>{post.title}</h1>
+              <p>{post.tags}</p>
+            </div>
+          </Link>
         </div>
       );
     }) : null;
