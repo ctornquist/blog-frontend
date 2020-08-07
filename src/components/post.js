@@ -1,5 +1,7 @@
+/* eslint-disable react/no-danger */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import marked from 'marked';
 import { fetchPost, deletePost, updatePost } from '../actions';
 
 class Post extends Component {
@@ -75,7 +77,7 @@ class Post extends Component {
         <div className="post" key={this.props.current.id}>
           <h1>{this.props.current.title}</h1>
           <p>tags: {this.props.current.tags}</p>
-          <p>{this.props.current.content}</p>
+          <div className="content" dangerouslySetInnerHTML={{ __html: marked(this.props.current.content || '') }} />
           <div className="editors">
             <button className="btn btn-primary" onClick={this.deletePost} type="submit">DELETE</button>
             <button className="btn btn-primary" onClick={this.startEdit} type="submit">EDIT</button>
@@ -85,9 +87,13 @@ class Post extends Component {
     } else {
       return (
         <div className="editing" key={this.props.current.id}>
+          <p id="change">title</p>
           <textarea id="title" onChange={this.changeTitle} value={this.state.title} />
+          <p id="change">tags</p>
           <textarea id="tags" onChange={this.changeTags} value={this.state.tags} />
+          <p id="change">cover url</p>
           <textarea id="cover" onChange={this.changeCover} value={this.state.coverUrl} />
+          <p id="change">content</p>
           <textarea id="content" onChange={this.changeContent} value={this.state.content} />
           <div className="editors">
             <button className="btn btn-primary" onClick={this.savePost} type="submit">SAVE</button>
