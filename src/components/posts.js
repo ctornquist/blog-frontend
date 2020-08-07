@@ -18,34 +18,17 @@ class Posts extends Component {
     console.log(this.props.all);
   }
 
-  /* renderPosts = () => {
-    if (this.props.all != null) {
-      this.props.all.map((post) => {
-        console.log('rendering posts');
-        return (
-          <div key={post.id}>
-            <Link to={`posts/${post.id}`}>{post.title}</Link>
-            <p>{post.tags}</p>
-            <button type="submit">DELETE</button>
-            <img src={post.coverURL} alt="blog post" />
-          </div>
-        );
-      });
-    }
-    console.log('returning null');
-    return null;
-  } */
-
   render() {
     console.log('inside render function');
     console.log(this.props.all);
 
     const renderPosts = this.props.all !== null ? this.props.all.map((post) => {
       console.log('rendering posts');
+      console.log(post.coverUrl);
       return (
         <div className="posts" key={post.id}>
           <Link to={`posts/${post.id}`}>
-            <img src={post.coverURL} alt="blog post" />
+            <img src={post.coverUrl} alt="blog" />
             <div className="top">
               <h1>{post.title}</h1>
               <p>{post.tags}</p>
@@ -55,7 +38,6 @@ class Posts extends Component {
       );
     }) : null;
 
-    console.log('returning something');
     return (
       <div>{renderPosts}</div>
     );

@@ -10,7 +10,7 @@ class newPost extends Component {
     this.state = {
       title: '',
       tags: '',
-      coverURL: '',
+      coverUrl: '',
       content: '',
     };
   }
@@ -24,7 +24,7 @@ class newPost extends Component {
   }
 
   changeCover = (event) => {
-    this.setState({ coverURL: event.target.value });
+    this.setState({ coverUrl: event.target.value });
   }
 
   changeContent = (event) => {
@@ -40,7 +40,7 @@ class newPost extends Component {
       <div className="newPost">
         <textarea id="title" onChange={this.changeTitle} value={this.state.title} placeholder="Title.." />
         <textarea id="tags" onChange={this.changeTags} value={this.state.tags} placeholder="Tags.." />
-        <textarea id="cover" onChange={this.changeCover} value={this.state.coverURL} placeholder="Cover URL.." />
+        <textarea id="cover" onChange={this.changeCover} value={this.state.coverUrl} placeholder="Cover URL.." />
         <textarea id="content" onChange={this.changeContent} value={this.state.content} placeholder="Content.." />
         <button className="btn btn-primary" onClick={this.addPost} type="submit">CREATE</button>
       </div>

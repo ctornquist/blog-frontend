@@ -16,13 +16,10 @@ const postsReducer = (state = init, action) => {
       console.log('all posts reducer');
       // assume you have all the posts from server (using CURL) accessible from action.posts
       // change {state} to contain this
-      return Object.assign(state, { all: action.payload, current: { } });
+      return { all: action.payload, current: state.current };
     case ActionTypes.FETCHPOST:
       console.log('single post reducer');
-      return Object.assign(state, { current: action.payload });
-    case ActionTypes.DELETEPOST:
-      console.log('delete post reducer');
-      return Object.assign(state, { all: action.payload, current: {} });
+      return { all: state.all, current: action.payload };
     default:
       return state;
   }
