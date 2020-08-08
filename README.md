@@ -2,7 +2,8 @@
 
 made a blog-tile thing!
 
-[deployed url](ct-cs52-blog.surge.sh)
+link: ct-cs52-blog.surge.sh. 
+^github is weird so just copy/paste
 
 ## What Worked Well
 - body supports markdown
