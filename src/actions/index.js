@@ -5,8 +5,8 @@ export const ActionTypes = {
   FETCHPOSTS: 'FETCHPOSTS',
   FETCHPOST: 'FETCHPOST',
   CREATEPOST: 'CREATEPOST',
-  DELETEPOST: 'DELETEPOST',
-  UPDATEPOST: 'UPDATEPOST',
+  // DELETEPOST: 'DELETEPOST',
+  // UPDATEPOST: 'UPDATEPOST',
 };
 
 const ROOT_URL = 'https://platform.cs52.me/api';
@@ -28,9 +28,10 @@ export function fetchPost(id) {
 
 export function createPost(post, history) {
   console.log('create post action');
-  console.log(post);
   axios.post(`${ROOT_URL}/posts${API_KEY}`, post)
-    .then(() => { history.push('/'); })
+    .then((response) => {
+      history.push('/');
+    })
     .catch((error) => {
       console.log(error);
     });

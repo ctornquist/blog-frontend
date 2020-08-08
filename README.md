@@ -11,6 +11,7 @@ link: ct-cs52-blog.surge.sh.
 - the routing works as it should, can move around the site easily
 
 ## What Didn't
+- I get a weird error about middleware when I try to add a new post, but everything works correctly. had a few TAs who wouldn't figure it out so just decided to leave it
 - can't move around the blog tiles, and they only show up in a single column on the main page
 
 ## Screenshots
