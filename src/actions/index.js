@@ -15,7 +15,7 @@ const API_KEY = '?key=ctornquist';
 export function fetchPost(id) {
   return (dispatch) => {
     console.log('fetch single post action');
-    axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`) // need api key?
+    axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
       .then((response) => {
         console.log('fetch single post action then');
         dispatch({ type: ActionTypes.FETCHPOST, payload: response.data });

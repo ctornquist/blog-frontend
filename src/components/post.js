@@ -29,7 +29,6 @@ class Post extends Component {
 
   startEdit = () => {
     console.log('starting edit');
-    // console.log(this.state);
     this.setState({
       title: this.props.current.title,
       content: this.props.current.content,
