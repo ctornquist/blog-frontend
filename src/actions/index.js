@@ -9,7 +9,8 @@ export const ActionTypes = {
   // UPDATEPOST: 'UPDATEPOST',
 };
 
-const ROOT_URL = 'https://platform.cs52.me/api';
+// const ROOT_URL = 'https://platform.cs52.me/api';
+const ROOT_URL = 'http://localhost:9090/api';
 const API_KEY = '?key=ctornquist';
 
 export function fetchPost(id) {
