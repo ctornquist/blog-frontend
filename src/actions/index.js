@@ -15,10 +15,10 @@ const API_KEY = '?key=ctornquist';
 
 export function fetchPost(id) {
   return (dispatch) => {
-    console.log('fetch single post action');
+    // console.log('fetch single post action');
     axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
       .then((response) => {
-        console.log('fetch single post action then');
+        // console.log('fetch single post action then');
         dispatch({ type: ActionTypes.FETCHPOST, payload: response.data });
       })
       .catch((error) => {
@@ -28,7 +28,7 @@ export function fetchPost(id) {
 }
 
 export function createPost(post, history) {
-  console.log('create post action');
+  // console.log('create post action');
   axios.post(`${ROOT_URL}/posts${API_KEY}`, post)
     .then((response) => {
       history.push('/');
@@ -40,7 +40,7 @@ export function createPost(post, history) {
 
 export function deletePost(id, history) {
   return (dispatch) => {
-    console.log('delete post action');
+    // console.log('delete post action');
     axios.delete(`${ROOT_URL}/posts/${id}`)
       .then(() => { history.push('/'); })
       .catch((error) => {
@@ -63,10 +63,10 @@ export function updatePost(id, post, history) {
 
 export function fetchPosts() {
   return (dispatch) => {
-    console.log('all posts action');
+    // console.log('all posts action');
     axios.get(`${ROOT_URL}/posts${API_KEY}`)
       .then((response) => {
-        console.log('all posts action then');
+        // console.log('all posts action then');
         // once we are done fetching we can dispatch a redux action with the response data
         dispatch({ type: ActionTypes.FETCHPOSTS, payload: response.data });
       })

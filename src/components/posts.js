@@ -10,7 +10,7 @@ class Posts extends Component {
   }
 
   componentDidMount() {
-    console.log('in posts mount');
+    // console.log('in posts mount');
     this.props.fetchPosts();
   }
 
@@ -19,12 +19,12 @@ class Posts extends Component {
   }
 
   render() {
-    console.log('inside render function');
+    // console.log('inside render function');
     console.log(this.props.all);
 
     const renderPosts = this.props.all !== null ? this.props.all.map((post) => {
-      console.log('rendering posts');
-      console.log(post.coverUrl);
+      // console.log('rendering posts');
+      // console.log(post.coverUrl);
       return (
         <div className="posts" key={post.id}>
           <Link to={`posts/${post.id}`}>
@@ -45,7 +45,7 @@ class Posts extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log('mapping to props');
+  // console.log('mapping to props');
   return {
     all: reduxState.posts.all,
   };

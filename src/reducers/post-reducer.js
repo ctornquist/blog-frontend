@@ -5,18 +5,16 @@ const init = {
   current: {},
 };
 
-// delete post from server using CURL in actions, re-FETCHPOSTS
-
 /**
  * Manages the local posts on your app
  */
 const postsReducer = (state = init, action) => {
   switch (action.type) {
     case ActionTypes.FETCHPOSTS:
-      console.log('all posts reducer');
+      // console.log('all posts reducer');
       return { all: action.payload, current: state.current };
     case ActionTypes.FETCHPOST:
-      console.log('single post reducer');
+      // console.log('single post reducer');
       return { all: state.all, current: action.payload };
     default:
       return state;

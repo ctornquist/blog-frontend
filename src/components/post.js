@@ -18,17 +18,17 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    console.log('single post mounting');
+    // console.log('single post mounting');
     this.props.fetchPost(this.props.match.params.postID);
   }
 
   deletePost = () => {
-    console.log('deletePost function in post');
+    // console.log('deletePost function in post');
     this.props.deletePost(this.props.match.params.postID, this.props.history);
   }
 
   startEdit = () => {
-    console.log('starting edit');
+    // console.log('starting edit');
     this.setState({
       title: this.props.current.title,
       content: this.props.current.content,
