@@ -14,12 +14,8 @@ class Posts extends Component {
     this.props.fetchPosts();
   }
 
-  componentDidUpdate() {
-    console.log(this.props.all);
-  }
-
   render() {
-    // console.log('inside render function');
+    console.log('inside render function');
     console.log(this.props.all);
 
     const renderPosts = this.props.all !== null ? this.props.all.map((post) => {

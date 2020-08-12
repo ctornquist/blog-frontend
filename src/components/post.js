@@ -66,8 +66,8 @@ class Post extends Component {
   }
 
   render() {
-    console.log('single post render');
-    console.log(this.props.match.params.postID);
+    // console.log('single post render');
+    // console.log(this.props.match.params.postID);
 
     if (!this.state.isEditing) {
       console.log('in render, current is: ');

@@ -9,7 +9,6 @@ export const ActionTypes = {
   // UPDATEPOST: 'UPDATEPOST',
 };
 
-// const ROOT_URL = 'https://platform.cs52.me/api';
 const ROOT_URL = 'https://ct-blog-platform.herokuapp.com/api';
 const API_KEY = '?key=ctornquist';
 
