@@ -2,7 +2,8 @@
 
 made a blog-tile thing!
 
-link: [ct-cs52-blog.surge.sh](ct-cs52-blog.surge.sh)
+link: [ct-cs52-blog.surge.sh](ct-cs52-blog.surge.sh)    
+^github pages are weird so might have to copy/paste
 
 ## What Worked Well
 - added authors for each blog post
