@@ -14,6 +14,8 @@ const App = (props) => {
         <Nav />
         <Switch>
           <Route exact path="/" component={Posts} />
+          <Route exact path="/signin" component={signIn} />
+          <Route exact path="/signup" component={signUp} />
           <Route path="/posts/new" component={newPost} />
           <Route path="/posts/:postID" component={Post} />
           <Route render={() => (<div>post not found </div>)} />
@@ -29,6 +31,9 @@ const Nav = (props) => {
       <ul className="navBar">
         <NavLink id="head" exact to="/">CAROLINE BLOG</NavLink>
         <NavLink to="/posts/new">NEW POST</NavLink>
+        <NavLink to="/posts/signin">SIGN IN</NavLink>
+        <NavLink to="/posts/signup">SIGN UP</NavLink>
+        <NavLink to="/posts/signout">SIGN OUT</NavLink>
       </ul>
     </nav>
   );
