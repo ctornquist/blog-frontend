@@ -9,8 +9,8 @@ export const ActionTypes = {
   AUTH_ERROR: 'AUTH_ERROR',
 };
 
-// const ROOT_URL = 'https://ct-blog-platform.herokuapp.com/api';
-const ROOT_URL = 'http://localhost:9090/api';
+const ROOT_URL = 'https://ct-blog-platform.herokuapp.com/api';
+// const ROOT_URL = 'http://localhost:9090/api';
 const API_KEY = '?key=ctornquist';
 
 export function fetchPost(id) {
