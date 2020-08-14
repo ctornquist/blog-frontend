@@ -75,6 +75,7 @@ class Post extends Component {
       return (
         <div className="post" key={this.props.current.id}>
           <h1>{this.props.current.title}</h1>
+          <h2>by: {this.props.current.author}</h2>
           <p>tags: {this.props.current.tags}</p>
           <div className="content" dangerouslySetInnerHTML={{ __html: marked(this.props.current.content || '') }} />
           <div className="editors">

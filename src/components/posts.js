@@ -27,6 +27,7 @@ class Posts extends Component {
             <img src={post.coverUrl} alt="blog" />
             <div className="top">
               <h1>{post.title}</h1>
+              <h2>by: {post.author}</h2>
               <p>{post.tags}</p>
             </div>
           </Link>
