@@ -5,7 +5,7 @@ import { signoutUser } from '../actions';
 
 class NavBar extends Component {
   signOutCall = () => {
-    console.log('calling sign out');
+    // console.log('calling sign out');
     this.props.signoutUser(this.props.history);
   }
 

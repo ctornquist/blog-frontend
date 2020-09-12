@@ -17,7 +17,7 @@ const App = (props) => {
       <NavBar />
       <div>
         <Switch>
-          <Route exact path="/" component={Posts} />
+          <PrivateRoute exact path="/" component={Posts} />
           <Route exact path="/signin" component={signIn} />
           <Route exact path="/signup" component={signUp} />
           <PrivateRoute path="/posts/new" component={newPost} />
@@ -28,19 +28,5 @@ const App = (props) => {
     </Router>
   );
 };
-
-/* const Nav = (props) => {
-  return (
-    <nav>
-      <ul className="navBar">
-        <NavLink id="head" exact to="/">CAROLINE BLOG</NavLink>
-        <NavLink to="/posts/new">NEW POST</NavLink>
-        <NavLink to="/signin">SIGN IN</NavLink>
-        <NavLink to="/signup">SIGN UP</NavLink>
-        <NavLink to="/signout">SIGN OUT</NavLink>
-      </ul>
-    </nav>
-  );
-}; */
 
 export default App;

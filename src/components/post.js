@@ -70,8 +70,8 @@ class Post extends Component {
     // console.log(this.props.match.params.postID);
 
     if (!this.state.isEditing) {
-      console.log('in render, current is: ');
-      console.log(this.props.current);
+      // console.log('in render, current is: ');
+      // console.log(this.props.current);
       return (
         <div className="post" key={this.props.current.id}>
           <h1>{this.props.current.title}</h1>
@@ -105,7 +105,7 @@ class Post extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log('mapping state in post');
+  // console.log('mapping state in post');
   return {
     current: reduxState.posts.current,
   };

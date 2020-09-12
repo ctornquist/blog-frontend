@@ -15,8 +15,8 @@ class Posts extends Component {
   }
 
   render() {
-    console.log('inside render function');
-    console.log(this.props.all);
+    // console.log('inside render function');
+    // console.log(this.props.all);
 
     const renderPosts = this.props.all !== null ? this.props.all.map((post) => {
       // console.log('rendering posts');
